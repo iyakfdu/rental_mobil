@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>Renty - Car Rental &amp; Booking HTML5 Template</title>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="all" />		
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+		<link rel="stylesheet" href="css/jquery.slider.min.css" />	
+		<link rel="stylesheet" href="css/bootstrap2.css" />
+		<link rel="stylesheet" href="css/style2.css" />
+		
+		<link rel="stylesheet" href="css/modall.css">
+		<link rel="stylesheet" href="css/modal2.css">
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<!--[if IE]>
+		<script type="text/javascript" src="js/html5.js"></script>
+		<link rel="stylesheet" id="stylesheet-ie" href="css/css_ie.css" type="text/css" media="all" />
+		<![endif]-->
+	</head>
+	<body class="page page-two-column">
+		<div id="conteiner">
+			<div id="branding">
+				<div id="branding-content">
+					
+					<div class="title-content">
+						<a href="03-home-v3.html" title="">
+							<img class="site-logo" src="images/thumb.png" alt="" />
+							<h1 class="site-title">
+							PALCAR								
+							</h1>
+						</a>								
+					</div>					
+					<div class="access-content">
+						<label for="menu-icon" class="menu-icon"><img src="images/menu.png" alt="menu" /></label>
+						<input type="checkbox" id="menu-icon" value="1" />					
+						<ul>
+							<li class="menu-close">
+								<span>&#10006;</span>
+							</li>
+							<li><a href="03-home-v3.html" title="">Home</a></li>
+							<li class="current_page_item"><a href="" title="">Atur Reservasi</a></li>
+							<li><a href="08-confirm.html" title="">Konfirmasi Pembayaran</a></li>
+							<li><a href="10-faq.html" title="">FAQ</a></li>
+						</ul>
+					
+					</div><!-- .access -->	
+									
+				</div><!-- #branding-content -->
+				<div class="clear"></div>
+			</div><!-- #branding -->
+							
+			<div id="main">
+				<form id="slider-form" action="04-choose-car.html" class="main-form2">		
+					<div id="book_car" class="title-form current">
+						<span>
+							<img src="images/3-icon.png" alt="" />
+							Atur Reservasi
+						</span>
+					</div>
+					<div class="container">
+						<div class="banner-grids">
+							<div class="col-md-4 search">
+								<form action="" method="post">
+									<button type="button" class="w3-btn-block w3-orange nav-toggle2" href="#collapse2"><b>LIHAT</button>
+								</form>
+								
+								<script>
+								$(document).ready(function() {
+									$('.nav-toggle2').click(function(){
+										//get collapse content selector
+										var collapse_content_selector = $(this).attr('href');					
+										
+										//make the collapse content to be shown or hide
+										var toggle_switch = $(this);
+										$(collapse_content_selector).toggle(function(){
+											if($(this).css('display')=='none'){
+												toggle_switch.html('LIHAT');//change the button label to be 'Show'
+											}else{
+												toggle_switch.html('LIHAT');//change the button label to be 'Hide'
+											}
+										});
+									});
+									
+								});	
+							</script>
+								
+							</div>
+							<div class="col-md-4 search">
+								<form action="#" method="">
+									<button type="button" class="w3-btn-block w3-orange nav-toggle" href="#collapse1"><b>UBAH</button>
+								</form>
+								
+								<script>
+			$(document).ready(function() {
+				$('.nav-toggle').click(function(){
+					//get collapse content selector
+					var collapse_content_selector = $(this).attr('href');					
+					
+					//make the collapse content to be shown or hide
+					var toggle_switch = $(this);
+					$(collapse_content_selector).toggle(function(){
+						if($(this).css('display')=='none'){
+							toggle_switch.html('UBAH');//change the button label to be 'Show'
+						}else{
+							toggle_switch.html('UBAH');//change the button label to be 'Hide'
+						}
+					});
+				});
+				
+			});	
+		</script>
+								
+							</div>
+							<div class="col-md-4 search">
+								<form action="#" method="">
+									<button type="button" class="w3-btn-block w3-orange" data-toggle="modal" data-target="#myModal"><b>BATAL</button>
+								</form>
+								
+								<div class="modal fadein" id="myModal" role="dialog">
+									<div class="modal-dialog">
+									
+									  <!-- Modal content-->
+									  <div class="modal-content">
+										<div class="modal-header">
+										  <button type="button" class="close" data-dismiss="modal">&times;</button>
+										
+										</div>
+										<div class="modal-body">
+										  <p><h3>Anda yakin ingin membatalkan reservasi ?</p>
+										</div>
+										<div class="modal-footer">
+										  <button type="button3" class="button4" data-dismiss="modal">Ya</button>
+										  <button type="button4" class="button5" data-dismiss="modal">Tidak</button>
+										</div>
+									  </div>
+									  
+									</div>
+								</div>
+								
+							</div>
+							
+							
+							<div class="clearfix"></div>
+						</div>	
+						
+		<div class="row">
+			<div class="col-sm-7 location">
+				<div class="row">
+				<h4>NO RESERVASI = 0001 <?php echo $no_reservasi; ?> </h4>
+						<div class= "hr"><hr></div>
+				</div>
+			</div>
+		</div>
+			
+			</form>
+						
+					<div id="collapse1" style="display:none">
+						<aside id="secondary" class="sidebar-left">	
+						<div class="widget widget2">
+							<h4>
+								Mobil
+								<a href="04-choose-car.html" title="">Ubah</a>
+							</h4>
+							<div class="widget-content2 main-block product-widget-mini">								
+								<div class="product-img2">
+									<img src="http://placehold.it/105x55" alt="" />
+								</div>
+								<div class="product-info">
+									<div class="entry-format2">
+										<div>Ford Escape</div>
+										<span>Economy</span>
+									</div>
+									<div class="features">
+										<p><img src="images/passenger-icon.png" alt="" /> 5 passengers</p>
+										<p><img src="images/suitcase-icon.png" alt="" /> 3 large suitcases, 2 small suitcase</p>
+										<p><img src="images/transmission-icon.png" alt="" /> automatic transmission</p>
+									</div>
+								</div>
+							</div>
+							</div>
+							</aside>
+							
+							<aside id="content2" class="sidebar-middle3">
+							<div class="widget widget3">
+							<h4>
+								Tanggal
+								<a href="01-home-v1.html" title="">Ubah</a>
+							</h4>
+							<div class="widget-content2 widget-info2">									
+								<h4>Tanggal Sewa</h4>
+								<p>Wed, 06 Mar, 2013 at 10:00</p>
+								<h4>Tanggal Kembali</h4>
+								<p>Thu, 21 Mar, 2013 at 10:00</p>
+							</div>
+							</div>
+							</aside>
+							
+						<div id="secondary" class="sidebar-middle4">	
+						<div class="widgett widget4">
+							<h4>
+								Informasi Pribadi
+								<a href="04-choose-car.html" title="">Ubah</a>
+							</h4>
+							<div class="widget-content2 widget-info2">	
+								<div class="newspaper">
+								<p>No ID &nbsp;&nbsp;&nbsp;: 00201838</p>
+								<p>Nama &nbsp;&nbsp;&nbsp;: Dhiny Aldrin</p>
+								<p>Email &nbsp;&nbsp;&nbsp;&nbsp;: dhinyayum@gmail.com</p>
+								<p>Alamat &nbsp;&nbsp;: Jl. Banten 2</p>
+								<p>Umur &nbsp;&nbsp;&nbsp;&nbsp;: 25</p>
+								<p>No Telp &nbsp;: 087865789045</p>
+								</div>
+							</div>
+							</div>
+							</div>
+							
+					</div>
+					
+					<div id="collapse2" style="display:none">
+						<aside id="secondary" class="sidebar-left">	
+						<div class="widget widget2">
+							<h4>
+								Mobil
+							</h4>
+							<div class="widget-content2 main-block product-widget-mini">								
+								<div class="product-img2">
+									<img src="http://placehold.it/105x55" alt="" />
+								</div>
+								<div class="product-info">
+									<div class="entry-format2">
+										<div>Ford Escape</div>
+										<span>Economy</span>
+									</div>
+									<div class="features">
+										<p><img src="images/passenger-icon.png" alt="" /> 5 passengers</p>
+										<p><img src="images/suitcase-icon.png" alt="" /> 3 large suitcases, 2 small suitcase</p>
+										<p><img src="images/transmission-icon.png" alt="" /> automatic transmission</p>
+									</div>
+								</div>
+							</div>
+							</div>
+							</aside>
+							
+							<aside id="content2" class="sidebar-middle3">
+							<div class="widget widget3">
+							<h4>
+								Tanggal
+							</h4>
+							<div class="widget-content2 widget-info2">									
+								<h4>Tanggal Sewa</h4>
+								<p>Wed, 06 Mar, 2013 at 10:00</p>
+								<h4>Tanggal Kembali</h4>
+								<p>Thu, 21 Mar, 2013 at 10:00</p>
+							</div>
+							</div>
+							</aside>
+							
+						<div id="secondary" class="sidebar-middle4">	
+						<div class="widgett widget4">
+							<h4>
+								Informasi Pribadi
+							</h4>
+							<div class="widget-content2 widget-info2">	
+								<div class="newspaper">
+								<p>No ID &nbsp;&nbsp;&nbsp;: 00201838</p>
+								<p>Nama &nbsp;&nbsp;&nbsp;: Dhiny Aldrin</p>
+								<p>Email &nbsp;&nbsp;&nbsp;&nbsp;: dhinyayum@gmail.com</p>
+								<p>Alamat &nbsp;&nbsp;: Jl. Banten 2</p>
+								<p>Umur &nbsp;&nbsp;&nbsp;&nbsp;: 25</p>
+								<p>No Telp &nbsp;: 087865789045</p>
+								</div>
+							</div>
+							</div>
+							</div>
+						
+						<div id="secondary" class="sidebar-middle4">
+							<div class="widget-footer widget-footer-total2">
+								Total: <span class="price">$3897.99</span>
+							</div>
+						</div>
+					</div>															
+						
+						
+						
+						
+						</div>
+		
+				</div>	
+				
+					<div class="clear"></div>
+				</form>	
+
+			</div>
+			<div class="clear"></div>
+			<footer id="footer">			
+				<div id="footer-menu">
+					<div class="footer-content">
+						<div class="footer-navbar">
+							<div class="footer-nav">
+								<h3 class="widget-title">PALCAR</h3>
+								<ul>
+									<li><a href="03-home-v3.html" title="">Home</a></li>
+									<li><a href="11-ketentuan.html" title="">Syarat dan Ketentuan</a></li>
+									<li><a href="12-kebijakan.html" title="">Kebijakan Privasi</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav">
+								<h3 class="widget-title">About</h3>
+								<ul>
+									<li><a href="13-about.html" title="">Tentang PALCAR</a></li>
+								</ul>
+							</div>
+							<div class="footer-nav">
+								<h3 class="widget-title">Support</h3>
+								<ul>
+									<li><a href="14-contact.html" title="">Hubungi Kami</a></li>
+									<li><a href="10-faq.html" title="">FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="custom-info footer-widget-single">
+ 							<div class="support">
+	 							<img src="images/support-icon.png" alt="" />
+	 							<div>
+		 							<div class="title">Online support</div>
+									<div class="phone">(0711) 9161986</div>
+		 							<div class="email"><a href="#" title="">palcar@gmail.com</a></div>
+		 						</div>
+		 						<div class="clear"></div>
+	 						</div>
+							</div>
+						<div class="clear"></div>
+					</div><!-- .footer-content -->
+				</div>
+				<div id="footer-content">
+					<img class="site-logo" src="images/thumb.png" alt="" />
+					<h1 class="site-title">PALCAR</h1>			
+					<div class="company-name">Jl. Veteran No.73A, 20 Ilir D. I, Ilir Tim. I, Kota Palembang, Sumatera Selatan 30114</div></div><!-- #footer-content -->
+			</footer><!--end:footer-->
+		</div><!--end:conteiner-->
+		<div id="overlay_block"></div>
+		<div class="admin-form-content sign_register_block">
+			<div class="admin-form-block">
+	 			<form class="main-form admin-form" action="07-manage.html">	
+	 				<div class="main_form_navigation">
+		 				<div id="tab_sign_in" class="title-form current"><span class="sign_in"><a href="#sign_in" title="">Atur Reservasi</a></span></div>	
+					</div>		
+					
+					<div id="tab_sign_in_content" class="content-form">
+						<div>
+							<input id="sign_in_email" class="input_placeholder" type="email" value="" placeholder="No Reservasi" name=""/>
+						</div>
+						<input class="admin-form-submit orange_button" type="submit" value="Continue"/>
+						
+					</div>
+					
+					<div class="clear"></div>
+				</form>				
+			</div>
+		</div>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.js"></script>
+		
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.js"></script>			
+		<!--[if IE]>
+		<script type="text/javascript" src="js/placeholder_ie.js"></script>
+		<![endif]-->
+		<script type="text/javascript" src="js/jquery.slider.min.js"></script>
+		<script type="text/javascript" src="js/jquery.meio.mask.js"></script>
+		<script type="text/javascript" src="js/custom-form-elements.js"></script>
+		<script type="text/javascript" src="js/jquery.selectbox-0.2.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
